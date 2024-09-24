@@ -7,24 +7,24 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/edtSeconds"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="Укажите количество секунд..."
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="16dp">
 
-    <Button
-        android:id="@+id/btnStartTimer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Запустить таймер"
-        app:layout_constraintTop_toBottomOf="@id/edtSeconds"
-        app:layout_constraintStart_toStartOf="@id/edtSeconds"
-        app:layout_constraintEnd_toEndOf="@id/edtSeconds"/>
+        <TimePicker
+            android:id="@+id/edtSeconds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:timePickerMode="spinner" />
+
+        <Button
+            android:id="@+id/btnStartTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Поставить будильник" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
